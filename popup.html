@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./popup.css" />
+    </head>
+    <body>
+        <form>
+            <input id="upperBtn" type="button" value="U" title="Uppercase">
+            <input id="lowerBtn" type="button" value="L" title="Lowercase">
+            <input id="capitalBtn" type="button" value="C" title="Capitalize">
+            <input id="trimBtn" type="button" value="T" title="Trim">
+            
+            <textarea id="textInput" name="textInput"></textarea>
+            
+            <input id="copyBtn" type="button" value="C" title="Copy">
+            <input id="cutBtn" type="button" value="X" title="Cut">
+            <input id="pasteBtn" type="button" value="V" title="Paste">
+            <input id="clearBtn" type="button" value="L" title="Clear">
+            <input id="settingsBtn" type="button" value="S" title="Settings">
+
+            <!-- STATS -->
+            <div id="statCount">
+                <span id="wordCt">0 words<br></span>
+                <span id="charCt">0 characters<br></span>
+                <span id="paraCt">0 paragraphs<br></span>
+            </div>
+        </form>
+
+        <div id="alertDiv"></div>
+
+        <!-- SETTINGS -->
+        <div id="settingsDiv">
+            <form>
+                <div id="settingsContent">
+                    <!-- Text Box -->
+                    <button type="button" class="collapsible">Text Box</button>
+                    <div class="content">
+                        <label for="sRow">Text Rows </label>
+                        <input id="sRow" type="number" min="1" max="33" title="Rows">
+                        <br>
+                        <label for="sCol">Text Cols </label>
+                        <input id="sCol" type="number" min="1" max="103" title="Columns">
+                    </div>
+
+                    <!-- Stats -->
+                    <button type="button" class="collapsible">Stats</button>
+                    <div class="content">
+                        <label for="sWords">Words </label>
+                        <input id="sWords" type="checkbox" title="Words">
+
+                        <label for="sChars">Characters </label>
+                        <input id="sChars" type="checkbox" title="Characters">
+
+                        <label for="sParas">Paragraphs </label>
+                        <input id="sParas" type="checkbox" title="Paragraphs">
+                    </div>
+                </div>
+
+                <br>
+                <div id="settingsBtns">
+                    <input id="sCancelBtn" type="button" value="Cancel" title="Cancel">
+                    <input id="sResetBtn" type="button" value="Reset" title="Reset">
+                    <input id="sSaveBtn" type="button" value="Save" title="Save">
+                </div>
+            </form>
+        </div>
+
+        <script src="./popup.js" type="module"></script>
+    </body>
+</html>

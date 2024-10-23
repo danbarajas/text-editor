@@ -1,0 +1,120 @@
+body {
+    padding: 10px;
+}
+
+/*********************
+    Text Box
+*********************/
+textarea {
+    resize: none;
+}
+
+/* Format Buttons */
+input[type="button"] {
+    background-color: #e6e6e6;
+    border: none;
+    color: black;
+    padding: 7.5px 12.5px;
+    font-family: monospace;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #cccccc;
+}
+
+input[type="button"]:active {
+    background-color: #b3b3b3;
+}
+
+/* Alert Box */
+#alertDiv {
+    background-color: #4ac87b;
+    color: white;
+    padding: 7.5px 12.5px;
+    font-size: 15px;
+    font-family: monospace;
+    text-align: center;
+    position: fixed;
+    opacity: 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+    bottom: 0;
+    right: 0;
+}
+
+/*********************
+    Settings Menu
+*********************/
+#settingsDiv {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+    padding: 2%;
+}
+
+#settingsContent {
+    width: 100%;
+}
+
+#settingsBtns {
+    position: absolute;
+    bottom: 5%;
+}
+
+label {
+    color: white;
+}
+
+#statCount {
+    float: right;
+}
+
+/*********************
+    Collapsibles
+*********************/
+.collapsible {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 96%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.active, .collapsible:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.content {
+    padding: 0 10px;
+    margin: 5px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+    content: '+';
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "-";
+}
